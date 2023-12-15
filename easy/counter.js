@@ -1,12 +1,16 @@
 // Given an integer n, return a counter function. This counter function initially returns n and then returns 1 more than the previous value every subsequent time it is called (n, n + 1, n + 2, etc).
 
 let num = 5;
-const counter = (num)=> {
+const counter = (num) => {
+  let count = num;
 
-    return num++
-
-
+  function counter() {
+    return count++;
+  }
+  return counter;
 };
 
-console.log(counter(num));
-console.log(counter(num));
+let d = counter(num);
+console.log(d())
+console.log(d());
+console.log(d());
