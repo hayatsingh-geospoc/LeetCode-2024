@@ -9,3 +9,4 @@ const counter = (num)=> {
 };
 
 console.log(counter(num));
+console.log(counter(num));
