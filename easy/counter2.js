@@ -40,27 +40,27 @@ calls[i] is one of "increment", "decrement" and "reset"
 // Logic
 
 const createCounter = (init) => {
+  let count = init;
   let obj = {
     increment: () => {
-      let count = init;
-      count++;
+      count++; 
       return count;
     },
     decrement: () => {
-      let count = init;
-      count--;
+      count--;  
       return count;
     },
     reset: () => {
-      let count = init;
+      count=init;
       return count;
     },
   };
-
   return obj;
 };
 
-console.log(createCounter(6).increment());
-console.log(createCounter(3).decrement());
-console.log(createCounter(8).reset());
-console.log(createCounter(9).increment());
+console.log(createCounter(5).increment());
+console.log(createCounter(2).increment());
+console.log(createCounter(1).decrement());
+console.log(createCounter(0).reset());
+console.log(createCounter(0).reset());
+
