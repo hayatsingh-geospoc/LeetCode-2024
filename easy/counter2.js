@@ -41,19 +41,23 @@ calls[i] is one of "increment", "decrement" and "reset"
 
 const createCounter = (init) => {
   let count = init;
+
   let obj = {
     increment: () => {
       count++; 
       return count;
     },
+
     decrement: () => {
       count--;  
       return count;
     },
+
     reset: () => {
       count=init;
       return count;
     },
+    
   };
   return obj;
 };
