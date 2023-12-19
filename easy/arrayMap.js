@@ -3,7 +3,9 @@
 
 
 let map = ()=> {
-  let data = {}
+  let data = { name : "hayat",
+               roll: "676"}
+
 
 
   return data
