@@ -3,7 +3,9 @@
 
 
 let map = ()=> {
-  let data
+  let data = {}
+
+
   return data
 };
 
