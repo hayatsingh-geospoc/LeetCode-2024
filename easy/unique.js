@@ -4,9 +4,9 @@ let arr = ['5','3','4','3','7','5'];
 
 
 
-   arr.forEach((data)=>{
+   let newArr = arr.filter((data)=>{
     return data
    })
 
 
-   console.log(arr)
+   console.log(newArr)
