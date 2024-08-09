@@ -3,7 +3,6 @@
 let num = 5;
 const counters = (num) => {
   let count = num;
-  console.log('count', count);
 
   function counter() {
     return count++;
@@ -12,6 +11,9 @@ const counters = (num) => {
 };
 
 let d = counters(num);
-console.log(d());
-console.log(d());
-console.log(d());
+// console.log(d());
+// console.log(d());
+// console.log(d());
+
+
+
