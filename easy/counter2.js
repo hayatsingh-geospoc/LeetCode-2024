@@ -35,40 +35,56 @@ Constraints:
 calls[i] is one of "increment", "decrement" and "reset" 
 */
 
-
-
 // Logic
 
-const createCounter = (init) => {
-  let count = init;
+// const createCounter = (init) => {
+//   let count = init;
+
+//   let obj = {
+//     increment: () => {
+//       count++;
+//       return count;
+//     },
+
+//     decrement: () => {
+//       count--;
+//       return count;
+//     },
+
+//     reset: () => {
+//       count = init;
+//       return count;
+//     },
+//   };
+//   return obj;
+// };
+
+// console.log(createCounter(5).increment());
+// console.log(createCounter(2).increment());
+// console.log(createCounter(1).decrement());
+// console.log(createCounter(0).reset());
+// console.log(createCounter(0).reset());
+
+//---trying again----//
+
+let counter = (init) => {
+  let value = init;
 
   let obj = {
     increment: () => {
-      count++; 
-      return count;
+      value++;
+      console.log(value);
+      return value;
     },
-
     decrement: () => {
-      count--;  
-      return count;
+      value--;
+      return value;
     },
-
     reset: () => {
-      count=init;
-      return count;
+      return value;
     },
-    
   };
   return obj;
 };
 
-console.log(createCounter(5).increment());
-console.log(createCounter(2).increment());
-console.log(createCounter(1).decrement());
-console.log(createCounter(0).reset());
-console.log(createCounter(0).reset());
-
-
-
-
-
+console.log(counter(5).increment());
