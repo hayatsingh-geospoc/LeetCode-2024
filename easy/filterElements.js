@@ -5,11 +5,10 @@ let filerEle = (arr, fn) => {
       resultArr.push(arr[i]);
     }
   }
-  
   return resultArr;
 };
 
-const arr = [1, 2, 3, 4, 5];
+const arr = [1, 2, 3, 4, 5 ,7,9];
 const isEven = (num) => num % 2 === 0;
 let result = filerEle(arr, isEven);
 
