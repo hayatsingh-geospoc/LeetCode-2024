@@ -5,6 +5,7 @@ let filerEle = (arr, fn) => {
       resultArr.push(arr[i]);
     }
   }
+  
   return resultArr;
 };
 
