@@ -1,9 +1,9 @@
 let str = 'Hi this is harry form India';
 
-let arrStr = str.split(" ");
+let arrStr = str.split(' ');
 
-arrStr.map((data)=>{
-   return data.split(',');
-})
+let reverseString = arrStr.map((data) => {
+  return data.split('').reverse().join('');
+});
 
-console.log(arrStr);
+console.log(reverseString);
