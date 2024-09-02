@@ -1,9 +1,17 @@
-let str = 'Hi this is harry form India';
+let str = 'Dear hayat you are the best';
 
-let arrStr = str.split(' ');
+let reverseString = (str) => {
+  if (str.length === 1) {
+    return str;
+  }
+  if (str.length === '') {
+    return '';
+  }
+  let arrStr = str.split(' ');
+  let reverseString = arrStr.map((data) => {
+    return data.split('').reverse().join('');
+  });
+  return reverseString;
+};
 
-let reverseString = arrStr.map((data) => {
-  return data.split('').reverse().join('');
-});
-
-console.log(reverseString);
+console.log(reverseString(str));
