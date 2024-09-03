@@ -15,4 +15,5 @@ let countVowel = (vowel) => {
 console.log(countVowel(vowel));
 
 strArr = 'the lazy frog jump into the wolf'.split('');
+
 assert.strictEqual(countVowel(vowel), 11, 'Test Case 1 Failed');
