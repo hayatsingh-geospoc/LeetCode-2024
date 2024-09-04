@@ -20,3 +20,12 @@ let str = 'Dear hayat you are the best';
 
 let arrStr = str.split('');
 console.log(arrStr);
+
+let tempArr = [];
+
+for (let i = arrStr.length; i >= 0; i--) {
+  console.log(arrStr[i]);
+  tempArr.push(arrStr[i]);
+}
+
+console.log(tempArr);
