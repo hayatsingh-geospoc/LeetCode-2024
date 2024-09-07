@@ -1,15 +1,15 @@
 function a(aa) {
   console.log('1st');
-  aa().then(() => {
+  aa(() => {
     console.log('2nd');
   });
 }
 
-function b() {
+function b(callback) {
   return new Promise((resolve) => {
     setTimeout(() => {
       console.log('Hi, I am function b');
-      resolve(); // Call the callback after the timeout
+      // Call the callback after the timeout
     }, 3000);
   });
 }
