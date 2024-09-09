@@ -10,6 +10,8 @@ b = c; // 2
 console.log(a, b);
 
 
+
+
 // Uisng Xor operator
 b = a ^ b; // 1
 a = a ^ b; // 3
