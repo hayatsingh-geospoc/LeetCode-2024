@@ -10,9 +10,6 @@ const oneDimensionalArray = (arr) => {
     }
   });
   return result;
-
-
-  
 };
 
 console.log(oneDimensionalArray(arr));
