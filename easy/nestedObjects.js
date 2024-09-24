@@ -34,8 +34,10 @@ let person = [
   },
 ];
 
+person.filter((ele, arr) => {
 
-person.filter
+    
+});
 
 console.log(person.contact.email);
 console.log(person.contact.address.city);
