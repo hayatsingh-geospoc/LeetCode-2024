@@ -5,7 +5,6 @@ const oneDimensionalArray = (arr) => {
   arr.forEach((element) => {
     if (Array.isArray(element)) {
       result = result.concat(oneDimensionalArray(element));
-      
     } else {
       result.push(element);
     }
