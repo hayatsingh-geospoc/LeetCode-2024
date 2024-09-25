@@ -3,7 +3,7 @@ let person = [
     name: 'John',
     contact: {
       phone: '987-654-3210',
-      email: 'john123@xyz.com',
+      email: 'johnz.com',
       address: {
         city: 'Berlin',
         country: 'Germany',
@@ -25,7 +25,7 @@ let person = [
     name: 'John',
     contact: {
       phone: '987-654-3210',
-      email: 'john123@xyz.com',
+      email: 'john123@.com',
       address: {
         city: 'Berlin',
         country: 'Kaithal',
@@ -34,10 +34,15 @@ let person = [
   },
 ];
 
-person.filter((ele, arr) => {
-
-    
+let data = person.filter((ele, arr) => {
+  return ele.contact.address.country === 'Kaithal';
 });
 
-console.log(person.contact.email);
-console.log(person.contact.address.city);
+console.log(data);
+//console.log(person.contact.address.city);
+
+var new_array = arr.map(
+  function callback(element, index, array) {
+    // Return value for new_array
+  }[thisArg]
+);
