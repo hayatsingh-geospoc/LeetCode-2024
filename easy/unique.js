@@ -31,4 +31,8 @@ function getUniqueElements(arr) {
 //let array = [1, 2, 3, 2, 4, 5, 6, 3, 3, 4];
 let uniqueElements = getUniqueElements(array);
 
+
+
+
+
 console.log(uniqueElements);
