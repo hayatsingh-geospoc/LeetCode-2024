@@ -31,8 +31,10 @@ function getUniqueElements(arr) {
 //let array = [1, 2, 3, 2, 4, 5, 6, 3, 3, 4];
 let uniqueElements = getUniqueElements(array);
 
+//console.log(uniqueElements);
 
+let arr = [3, 4, 6, 4, 7, 4, 7, 5, 8, 6, 7, 8, 6, 5];
 
+let uniqueArr = [...new Set(arr)];
 
-
-console.log(uniqueElements);
+console.log(uniqueArr);
