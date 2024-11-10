@@ -4,7 +4,19 @@
 
 let palindromeNumber  =  515;
 palindromeNumber = palindromeNumber.toString();
-console.log(palindromeNumber.split(''))
+//console.log(palindromeNumber.split(''))
+
+let str = ''
 for(let i = 0; i<=palindromeNumber.length-1;i++){
-    console.log(i)
-}
+    str = str  + palindromeNumber[i];
+};
+
+console.log(str == palindromeNumber);
+
+let palindromeFunction = (number)=> {
+let str = number.toString();
+let palindromeReverse = str.split('').reverse().join('');
+return palindromeReverse;
+};
+
+console.log(palindromeFunction(67676))
