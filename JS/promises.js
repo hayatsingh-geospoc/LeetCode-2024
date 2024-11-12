@@ -21,6 +21,8 @@ promise
   })
   .catch((err) => {
     console.log(err);
+
+    
   });
 
 // const myPromise = new Promise((resolve, reject) => {
