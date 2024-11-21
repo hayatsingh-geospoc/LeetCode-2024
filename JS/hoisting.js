@@ -6,12 +6,19 @@
 // console.log(a);
 // const a = 5;
 
+// let demo= ()=>{
+//     console.log("working")
+// };
 
+// demo();
 
-
-let demo= ()=>{
-    console.log("working")
+class Hayat {
+    constructor(){
+        this.name="working"
+    }
 };
 
-demo();
+let demoClass = new Hayat();
+
+console.log(demoClass)
 
