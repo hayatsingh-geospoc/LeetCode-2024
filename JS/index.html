@@ -9,6 +9,18 @@
 
     <script>
 
+        let closureFunc = ()=>{
+            let a = 2;
+            let childFunc = ()=> {
+                let b=3;
+                console.log(a+b)
+                return a+b
+            }
+            return childFunc()
+        };
+
+        closureFunc()
+
 
 
     </script>
