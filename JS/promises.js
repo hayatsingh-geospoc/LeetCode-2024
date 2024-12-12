@@ -10,7 +10,7 @@
 //     if ('') {
 //       resolve('working resolve');
 //     } else {
-//       reject('working rejected');
+//       reject('working rejected')
 //     }
 //   }, 3000);
 // });
@@ -99,10 +99,12 @@
 //   greet2 = () =>  {
 //     console.log(`Hello, ${this.name}`);
 //   };
+
+
 // const john = new Person('John');
 // john.greet();
 // greet2();
-// You
+
 
 
 
@@ -125,22 +127,39 @@
 // greet2();
 // greet3();
 
-console.log(1);
-setImmediate(() => {
-  console.log(2);
-});
+// console.log(1);
+
+
 setTimeout(() => {
-  console.log(3);
-}, 0);
-process.nextTick(() => {
-  console.log(4);
+  console.log('Timeout');
 });
-console.log(5);
+
+setImmediate(() => {
+  console.log('Immediate');
+});
+
+// Promise.resolve().then(() => {
+//   console.log('Promise');
+// });
+
+// process.nextTick(() => {
+//   console.log('NextTick');
+// });
+
+
+
+
+// process.nextTick(() => {
+//   console.log(4);
+// });
+
+// console.log(5);
 
 // 1
 // 5
 // 4
-// 2,3
+// 2
+//3
 
 
 
