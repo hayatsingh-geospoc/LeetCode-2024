@@ -19,3 +19,16 @@
 
 
 let arr = [4,54,5,345,,345,34,534,534,,43,53]
+
+
+let flattenArray = (arr)=>{
+    let newArr = []
+    for(let i=0; i<=arr.length-1;i++){
+        if(Array.isArray(arr))
+    }
+
+};
+
+let data = flattenArray(arr);
+
+console.log(data)
