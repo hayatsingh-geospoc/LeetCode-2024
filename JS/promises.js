@@ -106,8 +106,6 @@
 // greet2();
 
 
-
-
 // function Person(name) {
 //   this.name = name;
 //   this.greet = function() {
