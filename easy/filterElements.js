@@ -1,15 +1,11 @@
-let filerEle = (arr, fn) => {
-  let resultArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    if ((fn(arr[i]), i)) {
-      resultArr.push(arr[i]);
-    }
+let string = 'hi my name is khan and i am not a terrorist';
+
+let upperCaseFunc = (data) => {
+  let newStr = data.split(' ');
+  for (let i = 0; i < newStr.length; i++) {
+    newStr[i] = newStr[i][0].toUpperCase() + newStr[i].slice(1);
   }
-  return resultArr;
+  return newStr;
 };
 
-const arr = [1, 2, 3, 4, 5 ,7,9];
-const isEven = (num) => num % 2 === 0;
-let result = filerEle(arr, isEven);
-
-console.log(result);
+console.log(upperCaseFunc(string));
