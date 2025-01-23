@@ -6,33 +6,28 @@
 // Add all elements in the array using reduce function
 // Many many more etc
 
-
 // first question answer
 
-let arr =[ 6,7,9,3,4,12];
+let arr = [6, 7, 9, 3, 4, 12];
 let result = true;
 
-arr.forEach((data)=>{
+arr.forEach((data) => {
   result = result && data < 5;
 });
 
-console.log(result)
-
+console.log(result);
 
 // call back functions
 
-let a = (b)=> {
-    b()
-    console.log('a');
-   
+let a = (b) => {
+  b();
+  console.log('a');
 };
 
-let b = ()=>{
-  setTimeout(()=>{
-    console.log('b')
-  }, 3000) 
+let b = () => {
+  setTimeout(() => {
+    console.log('b');
+  }, 3000);
 };
 
-
-a(b)
-
+a(b);
