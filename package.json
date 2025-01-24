@@ -2,9 +2,10 @@
   "name": "leetcode-2024",
   "version": "1.0.0",
   "description": "This repo is basically to solve Leetcode's problems",
-  "main": "index.js",
+  "main": "easy/EXPRESS.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon EXPRESS.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +13,8 @@
   "dependencies": {
     "assert": "^2.1.0",
     "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
