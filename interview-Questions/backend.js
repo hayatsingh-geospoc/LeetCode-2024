@@ -132,15 +132,40 @@
 //   3 - 3   -
 //  1 - 1
 
-function abc() {
-  console.log(a); // undefined
-  console.log(b);
-  console.log(c);
+// function abc() {
+//   console.log(a); // undefined
+//   console.log(b);
+//   console.log(c);
 
-  let b = 5;
-  const c = 6;
+//   let b = 5;
+//   const c = 6;
 
-  var a = 1;
-}
+//   var a = 1;
+// }
 
-abc();
+// abc();
+
+let arr1 = ['a', 'b', 'c'];
+let arr2 = [1, 2, 3];
+let newArr;
+
+// for (let i = 0; i <= arr1.length - 1; i++) {
+//   newArr.push(arr1[i]);
+//   newArr.push(arr2[i]);
+// }
+
+// console.log(newArr);
+
+// newArr = arr1.map((arr, index) => {
+//   console.log(arr, arr2[index]);
+//   return [arr, arr2[index]];
+// });
+
+//console.log(newArr.flat());
+
+newArr = arr1.reduce((acc, item, index) => {
+  acc.push(item, arr2[index]);
+  return acc;
+}, []);
+
+console.log(newArr);
