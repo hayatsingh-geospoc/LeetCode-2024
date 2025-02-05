@@ -163,9 +163,33 @@ let newArr;
 
 //console.log(newArr.flat());
 
-newArr = arr1.reduce((acc, item, index) => {
-  acc.push(item, arr2[index]);
-  return acc;
-}, []);
+// newArr = arr1.reduce((acc, item, index) => {
+//   acc.push(item, arr2[index]);
+//   return acc;
+// }, []);
 
-console.log(newArr);
+// console.log(newArr);
+
+// print A, B , C
+
+console.log('A');
+
+// let a = (callback) => {
+//   setTimeout(() => {
+//     console.log('B');
+//     callback();
+//   }, 5000);
+// };
+
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve();
+    console.log('B');
+  }, 5000);
+}).then(() => {
+  console.log('C');
+});
+
+// a(() => {
+
+// });
