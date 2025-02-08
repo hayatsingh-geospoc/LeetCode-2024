@@ -1,13 +1,25 @@
-let a = {};
+let promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('resolve');
+  }, 3000);
+});
 
-let b = {
-  key: 'b',
-};
-let c = {
-  key: 'c',
-};
+let promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('resolve');
+  }, 4000);
+});
 
-a[b] = 123;
-a[c] = 456;
+let promise3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    reject(new Error());
+  }, 3000);
+});
 
-console.log(a[b]);
+Promise.all([promise1, promise2, promise3])
+  .then((value) => {
+    console.log(value);
+  })
+  .catch((err) => {
+    console.log(err);
+  });

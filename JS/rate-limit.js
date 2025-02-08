@@ -27,13 +27,13 @@ app.get('/data/:id', (req, res) => {
 
 let limiter = limit({
   windowMs: 1 * 60 * 1000,
-  max: 5,
+  max: 3,
   message: 'Too many requests',
 });
 
 app.use('/api', limiter); // Apply limiter only to '/api' routes
 
-app.get('/api', (req, res) => {
+app.get('/api/data', (req, res) => {
   res.send('This is a rate-limited API endpoint.');
 });
 
