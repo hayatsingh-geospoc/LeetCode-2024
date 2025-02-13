@@ -1,47 +1,33 @@
+/* What is Rate-Limiting ? How to implement  in nodejs ? what are the advantages and disadvantages
+
+ So RL is basically a technique where we set the limited no of request in the server at a particular no of time to prevent from different different attacks on the server 
+ 
+ like  Brute force attack , DDOs and in nodejs we can implememt this using a lib npm express-rate-limit and create a middleware for every request
+
+*/
+
 const express = require('express');
 const app = express();
-const cors = require('cors');
-const limit = require('express-rate-limit');
+const limiter = require('express-rate-limit');
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: 'url',
-    method: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  })
-);
 
-app.get('/', (req, res) => {
-  return res.status(200).send('Hello World!');
-});
-
-app.get('/data/:id', (req, res) => {
-  let { id } = req.params;
-  console.log(id);
-  return res.status(200).send({
-    status: true,
-    message: id,
-  });
-});
-
-let limiter = limit({
-  windowMs: 1 * 60 * 1000,
-  max: 3,
+const limterFunc = limiter({
+  windowMs: 60 * 1000,
+  limit: 5,
   message: 'Too many requests',
 });
 
-app.use('/api', limiter); // Apply limiter only to '/api' routes
-
-app.get('/api/data', (req, res) => {
-  res.send('This is a rate-limited API endpoint.');
+app.get('/data', limterFunc, (req, res) => {
+  return res.status(200).send({
+    status: true,
+    message: 'Completed',
+  });
 });
 
-app.get('/', (req, res) => {
-  res.send('Welcome! This route is not rate-limited.');
+app.listen(5050, () => {
+  console.log('server is running on port 5050');
 });
 
-let port = 4041;
-app.listen(port, () => {
-  console.log('the port is running on 4041');
-});
+
+
