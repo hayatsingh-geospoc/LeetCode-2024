@@ -1,25 +1,41 @@
-let promise1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('resolve');
-  }, 3000);
-});
+// Streams in nodejs basically transforming data
 
-let promise2 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve('resolve');
-  }, 4000);
-});
+const { error } = require('console');
+const fs = require('fs');
 
-let promise3 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    reject(new Error());
-  }, 3000);
-});
+// Create a readable stream
+// const readStream = fs.createReadStream('data.txt', 'utf8');
 
-Promise.all([promise1, promise2, promise3])
-  .then((value) => {
-    console.log(value);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// readStream.on('data', (chunk) => {
+//   console.log('Received chunk:', chunk);
+// });
+
+// readStream.on('error', (err) => {
+//   console.error('Error:', err);
+// });
+
+// readStream.on('end', () => {
+//   console.log('Finished reading file.');
+// });
+
+// Write Stream
+
+// let writeStream = fs.createWriteStream('../JS/data.txt');
+
+// writeStream.write('Hello javascript');
+
+// writeStream.end('end', () => {
+//   console.log('Ended');
+// });
+
+// writeStream.on('error', (error) => {
+//   console.log(error);
+// });
+
+// Duplex
+
+const readstream = fs.createReadStream('data.txt', 'utf-8');
+const writeStream = fs.createWriteStream('output.txt');
+
+readstream.pipe(writeStream);
+console.log('Piping completed.');
