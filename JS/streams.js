@@ -17,7 +17,7 @@ readStream.on('end', () => {
 
 // Write Stream
 
-let writeStream = fs.createWriteStream('../JS/data.txt');
+//let writeStream = fs.createWriteStream('../JS/data.txt');
 
 writeStream.write('Hello javascript');
 
